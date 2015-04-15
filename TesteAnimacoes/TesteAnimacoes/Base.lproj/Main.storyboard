@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TesteAnimacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuz-cy-k15">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40897180119999998" blue="0.90314909180000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="0ud-3q-5bH"/>
+                                    <constraint firstAttribute="height" constant="36" id="YP8-Ci-d70"/>
+                                </constraints>
+                                <state key="normal" title="Segue1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0ud-3q-5bH"/>
+                                        <exclude reference="YP8-Ci-d70"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0ud-3q-5bH"/>
+                                        <include reference="YP8-Ci-d70"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonSegue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YOh-He-KxB"/>
+                                    <segue destination="SaK-zN-Ogx" kind="presentation" modalPresentationStyle="overFullScreen" id="R5e-sY-G6J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Y-uM-BWU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40897180119999998" blue="0.90314909180000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="TSb-E1-fhs"/>
+                                    <constraint firstAttribute="width" constant="98" id="v9b-WD-qO3"/>
+                                </constraints>
+                                <state key="normal" title="Segue2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TSb-E1-fhs"/>
+                                        <exclude reference="v9b-WD-qO3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="TSb-E1-fhs"/>
+                                        <include reference="v9b-WD-qO3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonSegue2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EF5-kD-cie"/>
+                                    <segue destination="evZ-i5-xio" kind="presentation" modalPresentationStyle="overFullScreen" id="38g-PO-2z7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85744910799999996" green="0.44410442649999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yuz-cy-k15" secondAttribute="trailing" constant="30" id="Qtk-7b-sfv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Y4Y-uM-BWU" secondAttribute="bottom" constant="30" id="RAH-53-VEm"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yuz-cy-k15" secondAttribute="bottom" constant="30" id="gKW-Bq-Dn0"/>
+                            <constraint firstItem="Y4Y-uM-BWU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="ysk-Hp-Ewh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yuz-cy-k15"/>
+                                <exclude reference="Y4Y-uM-BWU"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ysk-Hp-Ewh"/>
+                                <exclude reference="Qtk-7b-sfv"/>
+                                <exclude reference="RAH-53-VEm"/>
+                                <exclude reference="gKW-Bq-Dn0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yuz-cy-k15"/>
+                                <include reference="Y4Y-uM-BWU"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ysk-Hp-Ewh"/>
+                                <include reference="Qtk-7b-sfv"/>
+                                <include reference="RAH-53-VEm"/>
+                                <include reference="gKW-Bq-Dn0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnSegue" destination="yuz-cy-k15" id="hjx-44-9Yv"/>
+                        <outlet property="btnSegue2" destination="Y4Y-uM-BWU" id="5R9-Op-5cZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="334.5"/>
+        </scene>
+        <!--Segunda View Controller-->
+        <scene sceneID="dkE-ir-ca3">
+            <objects>
+                <viewController id="SaK-zN-Ogx" customClass="SegundaViewController" customModule="TesteAnimacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yHV-dv-9Zl"/>
+                        <viewControllerLayoutGuide type="bottom" id="LPY-rn-2UC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Sf-hu-9he">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.85882352939999995" blue="0.97647058819999999" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ema-Gi-EiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159.5" y="334.5"/>
+        </scene>
+        <!--Terceira View Controller-->
+        <scene sceneID="6CV-tE-XUF">
+            <objects>
+                <viewController id="evZ-i5-xio" customClass="TerceiraViewController" customModule="TesteAnimacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3R2-b6-O1t"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ij6-pZ-NR8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2JO-OX-qao">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.85882352939999995" blue="0.72941176470000002" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUG-Zn-UUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="1122.75"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,15 +10,36 @@ import UIKit
 
 class SegundaViewController: UIViewController {
     
+    @IBOutlet weak var labelText: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        //        AlertSheet
+        let alerta: UIAlertController = UIAlertController(title: "Alerta Teste", message: "Texto Alerta", preferredStyle: .ActionSheet)
+        
+        let acaoS: UIAlertAction = UIAlertAction(title: "Sim", style: .Default) { action -> Void in
+            
+            self.labelText.text = "sim sim sim sim \n sim sim sim sim"
+        }
+        
+        let acaoN: UIAlertAction = UIAlertAction(title: "Não", style: .Default) { (action) -> Void in
+            
+            self.labelText.text = "nao nao nao nao \n nao nao nao nao \n nao nao nao nao"
+        }
+        
+        alerta.addAction(acaoS)
+        alerta.addAction(acaoN)
+        
+        self.presentViewController(alerta, animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        var downSwipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "downSwipe:")
         
+//        Animação de Swipe
         var downSwipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector("downSwipe"))
         downSwipe.direction = UISwipeGestureRecognizerDirection.Down
-        
-//        downSwipe.edges = UIRectEdge.Left
         
         self.view!.addGestureRecognizer(downSwipe)
         
@@ -35,6 +56,7 @@ class SegundaViewController: UIViewController {
         
        self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

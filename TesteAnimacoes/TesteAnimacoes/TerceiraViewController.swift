@@ -28,7 +28,6 @@ class TerceiraViewController: UIViewController {
         
         notificacao.postNotificationName("animeBotao2", object: self)
         
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

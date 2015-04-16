@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSegue(sender: AnyObject) {
        
+
+        
+//        Animação
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             
             self.btnSegue.transform = CGAffineTransformMakeTranslation(-100, -300)
@@ -26,7 +29,6 @@ class ViewController: UIViewController {
             
             self.btnSegue.transform = CGAffineTransformRotate(self.btnSegue.transform,CGFloat(M_PI))
             
-            println("Animacao")
         })
             { (terminou) -> Void in
             
@@ -34,8 +36,7 @@ class ViewController: UIViewController {
                     self.btnSegue.transform = CGAffineTransformRotate(self.btnSegue.transform, CGFloat(M_PI))
                     
                 })
-
-            
+                
         }
 
     }
@@ -43,8 +44,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSegue2(sender: AnyObject) {
         
-       // self.dismissViewControllerAnimated(true, completion: nil)
-        
+//        Animação
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             
             self.btnSegue2.transform = CGAffineTransformMakeTranslation(100, -300)
@@ -53,7 +53,6 @@ class ViewController: UIViewController {
             
             self.btnSegue2.transform = CGAffineTransformRotate(self.btnSegue2.transform,CGFloat(M_PI))
             
-            println("Animacao")
             })
             { (terminou) -> Void in
                 
@@ -62,10 +61,8 @@ class ViewController: UIViewController {
                     
                 })
                 
-                
         }
         
-
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +74,7 @@ class ViewController: UIViewController {
         notificacao1.addObserver(self, selector: "animarBotao1:", name: "animeBotao1", object: nil)
         
         notificacao2.addObserver(self, selector: "animarBotao2:", name: "animeBotao2", object: nil)
-        // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,13 +82,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+//    método que recebe notificação da outra view para animar o botão
     func animarBotao1(mensagem:NSNotification)
     {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             
             self.btnSegue.transform = CGAffineTransformMakeTranslation(10, 0)
-            
-            println("AnimacaoVolta1")
+          
         })
     }
     
@@ -101,7 +99,6 @@ class ViewController: UIViewController {
                 
                 self.btnSegue2.transform = CGAffineTransformMakeTranslation(-10, 0)
                 
-                println("AnimacaoVolta")
             })
     
     
